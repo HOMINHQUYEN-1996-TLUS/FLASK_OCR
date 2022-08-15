@@ -1,0 +1,142 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>YOLO-Object Detection</title>
+	<link rel="stylesheet" type="text/css" href="../static/index.css">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../static/index.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+  
+</head>
+<body>
+
+
+
+<div class='App'>
+    <header class='App-header'>
+        <p><u>
+          Object Detection - YOLO
+        </u></p>
+        <div className="pre_img">
+          <span><img id="imagebox" src=""></span>
+          <span class="muiten"><i class='bx bx-right-arrow-alt'></i></span>
+          <span><img id="imagebox1" src=""></span>
+        </div>
+        <form>
+          <input id="imageinput" type="file" name="image" onchange="readUrl(this)">
+        </form>
+			<button name="send" id = "sendbutton">Send</button>
+	</header>
+</div>
+
+</body>
+</html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object Detection - YOLOV4 + OCR</title>
+
+    <!-- Font Icon -->
+
+    <!-- Main css -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon.png') }}">
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <h2  style="height: fit-content !important">Object Detection - YOLOV4 + OCR</h2>
+            <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
+                <h3 class="hupload">
+                    Upload File
+                </h3>
+                <fieldset>
+                    <div class="form-row">
+                        <div class="form-file">
+                            <input type="file" id="imageinput" style="display: none;" onchange="readUrl(this)">
+                            <label for="imageinput">
+                                <div style="text-align: center;"><img src="" id="imagebox" alt=""></div>
+                            </label>
+                        </div>
+                        <div class="form-group-flex">
+                            <div class="form-group">
+                                <h3>Bank Number : </h3>
+                                <input type="text" id="bank_number" style="pointer-events: none;" placeholder="Bank Number" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text"id="bank_name" style="pointer-events: none;" placeholder="Bank Name" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="user_name" style="pointer-events: none;" placeholder="User Name"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="times" style="pointer-events: none;" placeholder="Time"/>
+                            </div>
+                            <div style="text-align: center;"><div  id="sendbutton"><span>Detect</span></div></div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+    <style>
+        .hupload{
+            width: 200px;
+            background-color: aqua;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 0px 10px 10px 0px;
+            text-align: center;
+        }
+        .form-file{
+            align-items: center;
+            width: 50%;
+        }
+        #imagebox{
+            max-width: 416px;
+        }
+        #signup-form{
+            padding-top: 0px;
+        }
+        #sendbutton{
+            width: 180px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 18px;
+            color: #999999;
+            background-color: aqua;
+            font-family: lato,sans-serif;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            border: 3px solid #ffffff;
+            border-radius: 20px;
+        }
+        #sendbutton span{
+            text-align: center;
+        }
+        .your_picture{
+            width: fit-content;
+        }
+    </style>
+    <!-- JS -->
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../static/index.js"></script>
+
+</body>
+</html>
