@@ -1,0 +1,8 @@
+flask
+opencv-python
+torchvision
+einops
+gdown
+pillow
+numpy
+pyyaml
