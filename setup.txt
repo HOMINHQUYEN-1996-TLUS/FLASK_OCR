@@ -6,3 +6,4 @@ gdown
 pillow
 numpy
 pyyaml
+pyopenssl

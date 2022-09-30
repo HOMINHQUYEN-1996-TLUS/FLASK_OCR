@@ -128,7 +128,7 @@ def runModel(image):
     labelsPath="./bank.names"
     cfgpath="cfg/yolov4-custom.cfg"
     #cfgpath = "cfg/yolov4-tiny.cfg"
-    wpath="weights/yolov4-custom_best.weights"
+    wpath="weights/yolov4-custom_3000.weights"
     #wpath = "weights/yolov4-tiny_best.weights"
     Lables=get_labels(labelsPath)
     CFG=get_config(cfgpath)

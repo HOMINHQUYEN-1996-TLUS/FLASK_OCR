@@ -5,8 +5,12 @@ import os , io , sys
 import numpy as np 
 import cv2
 import base64
+
+from sqlalchemy import false
 from yolo_detection_images import runModel,runOCR
+from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
+
 dem = 0
 ############################################## THE REAL DEAL ###############################################
 @app.route('/detectObject' , methods=['POST'])
@@ -24,8 +28,6 @@ def mask_image():
 		## any random stuff do here
 		################################################
 
-		# img,boudingBox,labels = runModel(img)
-		
 		
 		
 		img = Image.fromarray(img.astype("uint8"))
@@ -63,4 +65,6 @@ def after_request(response):
 
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', debug = False)
+	app.run(host='0.0.0.0',debug=false)
+	#app.run(ssl_context=('cert.pem', 'key.pem'))
+	#app.run(ssl_context='adhoc')
